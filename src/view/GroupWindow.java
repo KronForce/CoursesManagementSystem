@@ -18,8 +18,6 @@ public class GroupWindow extends BaseFrame{
         jPanel.setLayout(new BoxLayout(jPanel, BoxLayout.Y_AXIS));
         JScrollPane scrollPane = new JScrollPane(jPanel);
 
-        //for(int i = 0; i < 100; i++)
-        //    jPanel.add(new JPanel());
         JPanel jPanel1 = new JPanel();
         jPanel1.setBackground(Color.DARK_GRAY);
         jPanel1.setPreferredSize(new Dimension(1000, 70));
