@@ -6,17 +6,20 @@ import java.awt.*;
 /**
  * Created by mikes on 25.09.2016.
  */
-//todo для классов GroupWindow и StudentsManagement создать классы, объекты которых будут элементами окон (графическим представлением строк из бд с управляющими кнопками).
+    //todo для классов GroupWindow создать класс, объекты которого будут элементами окна (графическим представлением строк из бд с управляющими кнопками).
     //todo сделать CRUD на базе SQLite, добавить/удалить студента в общий список. Подгрузка списка учащихся в группах из общего списка студентов
 public class GroupWindow extends BaseFrame{
     public GroupWindow(String groupName){
         //При открытии этого окна, берем имя группы, делаем запрос в бд, оттуда приходят данные (выборка-таблица студентов), тут их парсим, записываем в коллекцию,
         //а коллекцию уже скармливаем на вход классу, отвечающему за графическое представление (JLabel + ... + JButton + JButton)
+        //todo сделать так, чтобы шапка оставалась при прокрутке списка сдудентов, например путем выноса ее в отдельный JPanel
         super(groupName, false);
 
         JPanel jPanel = new JPanel();
         jPanel.setLayout(new BoxLayout(jPanel, BoxLayout.Y_AXIS));
         JScrollPane scrollPane = new JScrollPane(jPanel);
+
+
 
         JPanel jPanel1 = new JPanel();
         jPanel1.setBackground(Color.DARK_GRAY);

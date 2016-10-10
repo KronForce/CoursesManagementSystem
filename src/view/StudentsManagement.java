@@ -10,6 +10,9 @@ import java.util.ArrayList;
  * Created by mikes on 24.09.2016.
  */
 public class StudentsManagement extends BaseFrame {
+    //todo сделать так, чтобы шапка оставалась при прокрутке списка сдудентов, например путем выноса ее в отдельный JPanel
+    //todo добавить в название класса Window
+    //todo решить вопрос с нумерацией студентов, как вариант путем создания статической переменной COUNT и при инициализации нового элемента передавать в ее в качестве параметра для порядкового номера элемента
     ArrayList<StudentsManagementWindowElement> studentsManagementWindowElements = new ArrayList<>();
     void addStudentsManagementWindowElements(JPanel jpanel, ArrayList<StudentsManagementWindowElement> studentsManagementWindowElements){
         for(StudentsManagementWindowElement studentsManagementWindowElement: studentsManagementWindowElements)

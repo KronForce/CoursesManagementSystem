@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
  * Created by mikes on 24.09.2016.
  */
 public class GroupsManagement extends BaseFrame {
+    //todo Добавить Window  в название класса
     public GroupsManagement() {
         /*
 

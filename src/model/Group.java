@@ -1,9 +1,12 @@
 package model;
 
+import java.util.ArrayList;
+
 /**
  * Created by mikes on 25.09.2016.
  */
 public class Group {
-    //todo Группа имеет имя, список учащихся, который она подгружает при помощи метода в самом начале работы с окном группы
+    //todo Группа должна подгружать список учащихся в момент открытия окна работы с группой
     String name;
+    ArrayList<Student> students = new ArrayList<>();
 }

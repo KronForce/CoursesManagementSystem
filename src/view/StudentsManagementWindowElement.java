@@ -81,7 +81,7 @@ public class StudentsManagementWindowElement extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                new StudentWindow("null");
+                //new StudentWindow();
             }
         });
 
@@ -149,7 +149,7 @@ public class StudentsManagementWindowElement extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                new StudentWindow("null");
+                new StudentWindow(student);
             }
         });
 
