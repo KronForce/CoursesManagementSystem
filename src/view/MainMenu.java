@@ -23,8 +23,12 @@ public class MainMenu extends BaseFrame {
         JPanel jPanel = new JPanel();
         jPanel.setLayout(null);
         this.add(jPanel);
+        //jPanel.setBackground(Color.YELLOW);
+        int fontSize = 40;
+        int fontType = 2;
+        String fontName = "Times New Roman";
 //-----------------------------------------------------------------------------------------
-        JButton groupsManagementButton = new JButton("Управление группами");
+        JButton groupsManagementButton = new JButton("Управление группами"); //в дальнейшем станет Группы
         groupsManagementButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -33,11 +37,11 @@ public class MainMenu extends BaseFrame {
         });
         //
         groupsManagementButton.setBounds(330,190,700,100);
-        groupsManagementButton.setFont(new java.awt.Font("Arial",2,40));
+        groupsManagementButton.setFont(new java.awt.Font(fontName,fontType,fontSize));
         //
         jPanel.add(groupsManagementButton);
 //-----------------------------------------------------------------------------------------
-        JButton studentsManagementButton = new JButton("Управление студентами");
+        JButton studentsManagementButton = new JButton("Управление студентами"); //в дальнейшем станет Студенты
         studentsManagementButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -46,7 +50,7 @@ public class MainMenu extends BaseFrame {
         });
         //
         studentsManagementButton.setBounds(330,310,700,100);
-        studentsManagementButton.setFont(new java.awt.Font("Arial",2,40));
+        studentsManagementButton.setFont(new java.awt.Font(fontName,fontType,fontSize));
         //
         jPanel.add(studentsManagementButton);
 //-----------------------------------------------------------------------------------------
