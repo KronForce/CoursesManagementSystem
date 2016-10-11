@@ -1,10 +1,12 @@
-package view;
+package view.elements;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import model.Student;
+import view.windows.CreateStudentWindow;
+import view.windows.EditStudentWindow;
 
 /**
  * Created by Miike on 09.10.2016.
@@ -81,7 +83,7 @@ public class StudentsManagementWindowElement extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                //new StudentWindow();
+                new CreateStudentWindow();
             }
         });
 
@@ -149,7 +151,7 @@ public class StudentsManagementWindowElement extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                new StudentWindow(student);
+                new EditStudentWindow(student);
             }
         });
 

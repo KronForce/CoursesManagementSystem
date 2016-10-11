@@ -1,11 +1,6 @@
-package view;
-
-import view.BaseFrame;
-import view.GroupsManagement;
-import view.StudentsManagement;
+package view.windows;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,9 +8,8 @@ import java.awt.event.ActionListener;
  * Created by mikes on 23.09.2016.
  * Этот класс отвечает за окно основного меню.
  */
-public class MainMenu extends BaseFrame {
-    public MainMenu() {
-        // todo Добавить Window в название класса.
+public class MainMenuWindow extends BaseFrame {
+    public MainMenuWindow() {
         // todo добавить градиент, раздел настроек для персонализации, создания/управления резервными копиями, добавить логин/пароль для защиты от нсд.
         // todo проработать вариант взаимодействия с расписанием для формирования повестки дня, TODO-листов, напоминаний и уведомлений
         // todo проработать взаимодействие с сокетами для приема/передачи информации на удаленный лог-сервер и бэкап сервер, либо пока остановиться на локальном варианте
@@ -33,7 +27,7 @@ public class MainMenu extends BaseFrame {
         groupsManagementButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new GroupsManagement();
+                new GroupsManagementWindow();
             }
         });
         //
@@ -46,7 +40,7 @@ public class MainMenu extends BaseFrame {
         studentsManagementButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new StudentsManagement();
+                new StudentsManagementWindow();
             }
         });
         //

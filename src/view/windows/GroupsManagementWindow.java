@@ -1,6 +1,7 @@
-package view;
+package view.windows;
 
-import view.BaseFrame;
+import view.windows.BaseFrame;
+import view.windows.GroupWindow;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,9 +11,9 @@ import java.awt.event.ActionListener;
 /**
  * Created by mikes on 24.09.2016.
  */
-public class GroupsManagement extends BaseFrame {
-    //todo Добавить Window  в название класса
-    public GroupsManagement() {
+public class GroupsManagementWindow extends BaseFrame {
+
+    public GroupsManagementWindow() {
         /*
 
         */

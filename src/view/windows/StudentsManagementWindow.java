@@ -1,24 +1,23 @@
-package view;
+package view.windows;
 
 import model.Student;
+import view.elements.StudentsManagementWindowElement;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 
 /**
  * Created by mikes on 24.09.2016.
  */
-public class StudentsManagement extends BaseFrame {
+public class StudentsManagementWindow extends BaseFrame {
     //todo сделать так, чтобы шапка оставалась при прокрутке списка сдудентов, например путем выноса ее в отдельный JPanel
-    //todo добавить в название класса Window
     //todo решить вопрос с нумерацией студентов, как вариант путем создания статической переменной COUNT и при инициализации нового элемента передавать в ее в качестве параметра для порядкового номера элемента
     ArrayList<StudentsManagementWindowElement> studentsManagementWindowElements = new ArrayList<>();
     void addStudentsManagementWindowElements(JPanel jpanel, ArrayList<StudentsManagementWindowElement> studentsManagementWindowElements){
         for(StudentsManagementWindowElement studentsManagementWindowElement: studentsManagementWindowElements)
             jpanel.add(studentsManagementWindowElement);
     }
-    public StudentsManagement() {
+    public StudentsManagementWindow() {
         //При открытии этого окна, делаем запрос в бд, оттуда приходят данные (выборка-таблица студентов), тут их парсим, записываем в коллекцию,
         //а коллекцию уже скармливаем на вход классу, отвечающему за графическое представление (JLabel + ... + JButton + JButton)
         super("Управление студентами", false);
