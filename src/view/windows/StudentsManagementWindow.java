@@ -14,8 +14,6 @@ public class StudentsManagementWindow extends BaseFrame {
 
     //todo ЗАДАЧА решить вопрос с редактированием студентов
 
-
-
     public static ArrayList<StudentsManagementWindowElement> studentsManagementWindowElements = new ArrayList<>();
 
     public static JPanel jPanel;

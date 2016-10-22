@@ -473,16 +473,6 @@ public class CreateStudentWindow extends BaseFrame {
                     StudentsManagementWindow.studentsManagementWindowElements.add(new StudentsManagementWindowElement(newStudent));
                     //-------------------------------------------------------
 
-
-                    // StudentsManagementWindow.jPanel.repaint();
-                    //System.out.println(StudentsManagementWindow.studentsManagementWindowElements.size());
-                    System.out.println("-------------");
-                    for (StudentsManagementWindowElement s : StudentsManagementWindow.studentsManagementWindowElements) {
-                        System.out.println(s.student.getLastName());
-                    }
-                    System.out.println("-------------");
-                    //StudentsManagementWindow.repaint1();
-
                     JOptionPane.showMessageDialog(null, "Студент успешно добавлен!");
                 } catch (Exception exc) {
                     JOptionPane.showMessageDialog(null, "Ошибка при добавлении студента!");
@@ -500,7 +490,6 @@ public class CreateStudentWindow extends BaseFrame {
     }
 }
 //todo ПРИЧЕСЫВАНИЕ При нажатии на кнопку сохранения окно должно закрыться, ведь мы студентов добавляем по одному
-//todo ПРИЧЕСЫВАНИЕ убрать из консоли лишние выводы при создании студента
 //todo ПРИЧЕСЫВАНИЕ подумать о том, чтобы JLabel-ы были не для всех групп, а для 1-я для базовой группы по предмету, 2я - для расширенной
 //todo ПРИЧЕСЫВАНИЕ Поместить все данные на JScrollPane для того, чтобы в этом же окне были допданные (родители, школа, телефоны и тд).
 //todo ПРИЧЕСЫВАНИЕ При нажатии кнопки "Добавить", отправлять информацию об оперции в лог.
