@@ -35,7 +35,7 @@ public class StudentsManagementWindowElement extends JPanel{
     private JLabel rusGroupLabel;
     private JButton openEditStudentInformation;
 
-
+//---------------------Шапка---------------------
     public StudentsManagementWindowElement(){
 
         this.setPreferredSize(new Dimension(1000, 70));
@@ -106,6 +106,7 @@ public class StudentsManagementWindowElement extends JPanel{
         this.add(openEditStudentInformation);
 
     }
+//---------------------Строка---------------------
     public StudentsManagementWindowElement(Student student){
         this.student = student;
         this.setPreferredSize(new Dimension(1000, 70));

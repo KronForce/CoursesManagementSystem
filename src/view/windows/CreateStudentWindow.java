@@ -467,7 +467,7 @@ public class CreateStudentWindow extends BaseFrame {
                     String physAdvancedGroupName = ""+ fr1Label.getText()+ fr2Label.getText();
                     String rusGroupName = "" + rusGroupLabel.getText();
                     //----------------Тестовый вариант-----------------------
-                    Student newStudent = new Student(lastNameLabel.getText(), firstNameLabel.getText(), middleNameLabel.getText(),
+                    Student newStudent = new Student(lastNameTextField.getText(), firstNameTextField.getText(), middleNameTextField.getText(),
                             mathBaseGroupName, mathAdvancedGroupName, physBaseGroupName, physAdvancedGroupName, rusGroupName);
                     //newStudent.
                     StudentsManagementWindow.studentsManagementWindowElements.add(new StudentsManagementWindowElement(newStudent));
