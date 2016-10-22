@@ -9,7 +9,7 @@ public class BaseFrame extends JFrame {
     public BaseFrame (String titleName, Boolean isCloseOperationCLOSE){
         //isCloseOperationClose - флаг, отвечающий за варианты хода событий после нажатия кнопки Close (правый верхний угол).
         this.setTitle(titleName);
-        this.setSize(1500, 700);
+        this.setSize(1500, 800); //700 ?
         if(isCloseOperationCLOSE){
             this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         }
