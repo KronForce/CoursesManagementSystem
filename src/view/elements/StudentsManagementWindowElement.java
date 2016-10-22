@@ -23,7 +23,9 @@ public class StudentsManagementWindowElement extends JPanel{
     private int sizeOfMiddleNameLabel = 200;
 
     public static Student student;
-
+//-----------------------
+    private static int elementsCount = 0;
+//-----------------------
     private JLabel numberLabel;
     private JLabel lastNameLabel;
     private JLabel firstNameLabel;
@@ -113,7 +115,7 @@ public class StudentsManagementWindowElement extends JPanel{
         this.setMaximumSize(new Dimension(1500, 70));
         this.setBackground(Color.YELLOW);
 
-        numberLabel = new JLabel("№");
+        numberLabel = new JLabel("" + (++elementsCount));
         numberLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
         numberLabel.setPreferredSize(new Dimension(30,70));
 
