@@ -17,11 +17,11 @@ public class StudentsManagementWindow extends BaseFrame {
 
     public static JPanel jPanel;
     public static JScrollPane scrollPane;
-    public static void repaint1(){
-        System.out.println("Вызван метод REPAINT!");
-       StudentsManagementWindow.jPanel.repaint();
-       StudentsManagementWindow.scrollPane.revalidate();
-    }
+//    public static void repaint1(){
+//        System.out.println("Вызван метод REPAINT!");
+////       StudentsManagementWindow.jPanel.repaint();
+//       StudentsManagementWindow.scrollPane.revalidate();
+//    }
     static void addStudentsManagementWindowElements(JPanel jpanel, ArrayList<StudentsManagementWindowElement> studentsManagementWindowElements){
         for(StudentsManagementWindowElement studentsManagementWindowElement: studentsManagementWindowElements)
             jpanel.add(studentsManagementWindowElement);
