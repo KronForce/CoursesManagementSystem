@@ -22,6 +22,7 @@ public class StudentsManagementWindowElement extends JPanel{
     private int sizeOfFirstNameLabel = 200;
     private int sizeOfMiddleNameLabel = 200;
 
+    public static Student student;
 
     private JLabel numberLabel;
     private JLabel lastNameLabel;
@@ -84,6 +85,7 @@ public class StudentsManagementWindowElement extends JPanel{
             public void actionPerformed(ActionEvent e) {
 
                 new CreateStudentWindow();
+
             }
         });
 
@@ -105,6 +107,7 @@ public class StudentsManagementWindowElement extends JPanel{
 
     }
     public StudentsManagementWindowElement(Student student){
+        this.student = student;
         this.setPreferredSize(new Dimension(1000, 70));
         this.setMaximumSize(new Dimension(1500, 70));
         this.setBackground(Color.YELLOW);
