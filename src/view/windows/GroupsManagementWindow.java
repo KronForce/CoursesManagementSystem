@@ -25,27 +25,27 @@ public class GroupsManagementWindow extends BaseFrame {
 
         String fontName = "Times New Roman";
         int fonrType = 2;
-        int fontSize = 15;
+        int fontSize = 25;
 
 
         JLabel mathLabel = new JLabel();
-        mathLabel.setPreferredSize(new Dimension(90, 50));
+        mathLabel.setPreferredSize(new Dimension(200, 50));
         mathLabel.setBackground(Color.black);
-        mathLabel.setText("Математика");
+        mathLabel.setText("    Математика");
         mathLabel.setFont(new Font(fontName,fonrType,fontSize));
         mathPanel.add(mathLabel);
 
         JLabel physLabel = new JLabel();
-        physLabel.setPreferredSize(new Dimension(75, 55));
+        physLabel.setPreferredSize(new Dimension(180, 55));
         physLabel.setBackground(Color.black);
-        physLabel.setText("    Физика  ");
+        physLabel.setText("        Физика  ");
         physLabel.setFont(new Font(fontName,fonrType,fontSize));
         physPanel.add(physLabel);
 
         JLabel russianLabel = new JLabel();
-        russianLabel.setPreferredSize(new Dimension(100, 50));
+        russianLabel.setPreferredSize(new Dimension(180, 50));
         russianLabel.setBackground(Color.black);
-        russianLabel.setText("  Русский язык");
+        russianLabel.setText("    Русский язык");
         russianLabel.setFont(new Font(fontName,fonrType,fontSize));
         russianPanel.add(russianLabel);
 

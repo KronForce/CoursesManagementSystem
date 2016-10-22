@@ -40,7 +40,7 @@ public class MainMenuWindow extends BaseFrame {
         studentsManagementButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new StudentsManagementWindow();
+                new  StudentsManagementWindow();
             }
         });
         //
