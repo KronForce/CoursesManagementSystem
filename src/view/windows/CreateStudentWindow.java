@@ -12,6 +12,11 @@ import java.awt.event.ActionListener;
 /**
  * Created by Miike on 12.10.2016.
  */
+    //todo ЗАДАЧА При повторном нажатии кнопки соотвествующий JLabel должен стираться
+    //todo ЗАДАЧА При нажатии "добавить студента" группы должны подтянуться в результат
+    //todo ЗАДАЧА добавить проверку, что студент не может ходить в 2 базовые группы сразу по одному предмету, как вариант прописать стирание в JButton-ах, а в студента пулять содержимое JLabel-ов
+    //todo ЗАДАЧА При нажатии на кнопку сохранения должно выводиться MessageDialog о том, что все успешно или не удалось
+
 public class CreateStudentWindow extends BaseFrame {
     private int fontType = 2;
     private int fontSize = 35;
@@ -397,3 +402,4 @@ public class CreateStudentWindow extends BaseFrame {
         this.setVisible(true);
     }
 }
+//todo ПРИЧЕСЫВАНИЕ При нажатии на кнопку сохранения окно должно закрыться, ведь мы студентов добавляем по одному

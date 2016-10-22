@@ -4,7 +4,7 @@ package model;
  * Created by mikes on 25.09.2016.
  */
 public class Student {
-    //todo Студент имеет поля посещаемости и статуса оплаты обучения метод, заполняющий поля посещаемости и статуса задолженности по обучению.
+    // Студент имеет поля посещаемости и статуса оплаты обучения метод, заполняющий поля посещаемости и статуса задолженности по обучению.
     private String lastName;
     private String firstName;
     private String middleName;
