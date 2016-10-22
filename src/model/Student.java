@@ -18,6 +18,11 @@ public class Student {
 
     private String rusGroupName;
 
+    public Student(String lastName, String firstName, String middleName) {
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.middleName = middleName;
+    }
 
     public Student(String lastName, String firstName, String middleName, String mathBaseGroupName, String mathAdvancedGroupName, String physBaseGroupName, String physAdvancedGroupName, String rusGroupName) {
         this.lastName = lastName;
