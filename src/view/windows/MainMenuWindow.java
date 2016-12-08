@@ -1,6 +1,7 @@
 package view.windows;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -9,44 +10,44 @@ import java.awt.event.ActionListener;
  * Этот класс отвечает за окно основного меню.
  */
 public class MainMenuWindow extends BaseFrame {
-    public MainMenuWindow() {
+    private int fontSize = 40;
+    private int fontType = 2;
+    private String fontName = "Times New Roman";
+    private Font elementFont = new Font(fontName, fontType, fontSize);
 
+    public MainMenuWindow() {
         super("СУ Курсами", true);
-//-----------------------------------------------------------------------------------------
+
         JPanel jPanel = new JPanel();
-        jPanel.setLayout(null);
-        this.add(jPanel);
-        //jPanel.setBackground(Color.YELLOW);
-        int fontSize = 40;
-        int fontType = 2;
-        String fontName = "Times New Roman";
-//-----------------------------------------------------------------------------------------
+
         JButton groupsManagementButton = new JButton("Управление группами"); //в дальнейшем станет Группы
+        JButton studentsManagementButton = new JButton("Управление студентами"); //в дальнейшем станет Студенты
+
+        //jPanel.setBackground(Color.YELLOW);
+
+        groupsManagementButton.setFont(new java.awt.Font(fontName, fontType, fontSize));
+        studentsManagementButton.setFont(new java.awt.Font(fontName, fontType, fontSize));
+
+        groupsManagementButton.setBounds(330, 190, 700, 100);
+        studentsManagementButton.setBounds(330, 310, 700, 100);
+
         groupsManagementButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new GroupsManagementWindow();
             }
         });
-        //
-        groupsManagementButton.setBounds(330,190,700,100);
-        groupsManagementButton.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        //
-        jPanel.add(groupsManagementButton);
-//-----------------------------------------------------------------------------------------
-        JButton studentsManagementButton = new JButton("Управление студентами"); //в дальнейшем станет Студенты
         studentsManagementButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new  StudentsManagementWindow();
+                new StudentsManagementWindow();
             }
         });
-        //
-        studentsManagementButton.setBounds(330,310,700,100);
-        studentsManagementButton.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        //
+
+        this.add(jPanel);
+        jPanel.add(groupsManagementButton);
         jPanel.add(studentsManagementButton);
-//-----------------------------------------------------------------------------------------
+        jPanel.setLayout(null);
         this.setVisible(true);
     }
 }

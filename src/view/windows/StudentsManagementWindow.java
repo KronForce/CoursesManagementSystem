@@ -19,10 +19,11 @@ public class StudentsManagementWindow extends BaseFrame {
     public static JPanel jPanel;
     public static JScrollPane scrollPane;
 
-    static void addStudentsManagementWindowElements(JPanel jpanel, ArrayList<StudentsManagementWindowElement> studentsManagementWindowElements){
-        for(StudentsManagementWindowElement studentsManagementWindowElement: studentsManagementWindowElements)
+    static void addStudentsManagementWindowElements(JPanel jpanel, ArrayList<StudentsManagementWindowElement> studentsManagementWindowElements) {
+        for (StudentsManagementWindowElement studentsManagementWindowElement : studentsManagementWindowElements)
             jpanel.add(studentsManagementWindowElement);
     }
+
     public StudentsManagementWindow() {
         //При открытии этого окна, делаем запрос в бд, оттуда приходят данные
         // (выборка-таблица студентов), тут их парсим, записываем в коллекцию,
@@ -36,9 +37,8 @@ public class StudentsManagementWindow extends BaseFrame {
         //---------------------Добавление шапки-----------------------------
         StudentsManagementWindowElement studentsManagementWindowElement = new StudentsManagementWindowElement();
         jPanel.add(studentsManagementWindowElement);
-        //------------------------------------------------------------------
         //---------------------Добавление студентов из общего списка---------------------
-        addStudentsManagementWindowElements(jPanel,studentsManagementWindowElements);
+        addStudentsManagementWindowElements(jPanel, studentsManagementWindowElements);
         //-------------------------------------------------------------------------------
         this.add(scrollPane);
         this.setVisible(true);

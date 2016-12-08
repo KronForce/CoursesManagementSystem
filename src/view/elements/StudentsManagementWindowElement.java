@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import model.Student;
 import view.windows.CreateStudentWindow;
 import view.windows.EditStudentWindow;
@@ -11,7 +12,7 @@ import view.windows.EditStudentWindow;
 /**
  * Created by Miike on 09.10.2016.
  */
-public class StudentsManagementWindowElement extends JPanel{
+public class StudentsManagementWindowElement extends JPanel {
 
     private int fontSize = 25;
     private int fontType = 2;
@@ -21,11 +22,15 @@ public class StudentsManagementWindowElement extends JPanel{
     private int sizeOfLastNameLabel = 200;
     private int sizeOfFirstNameLabel = 200;
     private int sizeOfMiddleNameLabel = 200;
-
+    private int height = 70;
+    private Font elementFont = new Font(fontName, fontType, fontSize);
+    //---------------------------------------
+    private int idStudentsManagementElement = 0;
+    //---------------------------------------
     public static Student student;
-//-----------------------
+    //-----------------------
     private static int elementsCount = 0;
-//-----------------------
+    //-----------------------
     private JLabel numberLabel;
     private JLabel lastNameLabel;
     private JLabel firstNameLabel;
@@ -37,144 +42,120 @@ public class StudentsManagementWindowElement extends JPanel{
     private JLabel rusGroupLabel;
     private JButton openEditStudentInformation;
 
-//---------------------Шапка---------------------
-    public StudentsManagementWindowElement(){
-
-        this.setPreferredSize(new Dimension(1000, 70));
-        this.setMaximumSize(new Dimension(1500, 70));
+    //---------------------Шапка---------------------
+    public StudentsManagementWindowElement() {
         this.setBackground(Color.GRAY);
-
         numberLabel = new JLabel("№");
-        numberLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        numberLabel.setPreferredSize(new Dimension(30,70));
-
         lastNameLabel = new JLabel("Фамилия");
-        lastNameLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        lastNameLabel.setPreferredSize(new Dimension(sizeOfLastNameLabel,70));
-
         firstNameLabel = new JLabel("Имя");
-        firstNameLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        firstNameLabel.setPreferredSize(new Dimension(sizeOfFirstNameLabel,70));
-
         middleNameLabel = new JLabel("Отчество");
-        middleNameLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        middleNameLabel.setPreferredSize(new Dimension(sizeOfMiddleNameLabel,70));
-
         mathBaseGroupLabel = new JLabel("МБаза");
-        mathBaseGroupLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        mathBaseGroupLabel.setPreferredSize(new Dimension(sizeOfBaseGroup,70));
-
         mathAdvancedGroupLabel = new JLabel("МРасш");
-        mathAdvancedGroupLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        mathAdvancedGroupLabel.setPreferredSize(new Dimension(sizeOfAdvancedGroup,70));
-
         physBaseGroupLabel = new JLabel("ФБаза");
-        physBaseGroupLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        physBaseGroupLabel.setPreferredSize(new Dimension(sizeOfBaseGroup,70));
-
         physAdvancedGroupLabel = new JLabel("ФРасш");
-        physAdvancedGroupLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        physAdvancedGroupLabel.setPreferredSize(new Dimension(sizeOfAdvancedGroup,70));
-
         rusGroupLabel = new JLabel("РУС");
-        rusGroupLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        rusGroupLabel.setPreferredSize(new Dimension(sizeOfBaseGroup,70));
 
         openEditStudentInformation = new JButton("Новый Студент");
-        openEditStudentInformation.setFont(new java.awt.Font(fontName,fontType,fontSize));
         openEditStudentInformation.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 new CreateStudentWindow();
-
             }
         });
 
-        this.add(numberLabel);
+        this.setPreferredSize(new Dimension(1000, height));
+        this.setMaximumSize(new Dimension(1500, height));
 
+        numberLabel.setPreferredSize(new Dimension(30, height));
+        lastNameLabel.setPreferredSize(new Dimension(sizeOfLastNameLabel, height));
+        firstNameLabel.setPreferredSize(new Dimension(sizeOfFirstNameLabel, height));
+        middleNameLabel.setPreferredSize(new Dimension(sizeOfMiddleNameLabel, height));
+        mathBaseGroupLabel.setPreferredSize(new Dimension(sizeOfBaseGroup, height));
+        mathAdvancedGroupLabel.setPreferredSize(new Dimension(sizeOfAdvancedGroup, height));
+        physBaseGroupLabel.setPreferredSize(new Dimension(sizeOfBaseGroup, height));
+        physAdvancedGroupLabel.setPreferredSize(new Dimension(sizeOfAdvancedGroup, height));
+        rusGroupLabel.setPreferredSize(new Dimension(sizeOfBaseGroup, height));
+
+        numberLabel.setFont(elementFont);
+        lastNameLabel.setFont(elementFont);
+        middleNameLabel.setFont(elementFont);
+        firstNameLabel.setFont(elementFont);
+        physAdvancedGroupLabel.setFont(elementFont);
+        openEditStudentInformation.setFont(elementFont);
+        physBaseGroupLabel.setFont(elementFont);
+        mathAdvancedGroupLabel.setFont(elementFont);
+        mathBaseGroupLabel.setFont(elementFont);
+        rusGroupLabel.setFont(elementFont);
+
+        this.add(numberLabel);
         this.add(lastNameLabel);
         this.add(firstNameLabel);
         this.add(middleNameLabel);
-
         this.add(mathBaseGroupLabel);
         this.add(mathAdvancedGroupLabel);
-
         this.add(physBaseGroupLabel);
         this.add(physAdvancedGroupLabel);
-
         this.add(rusGroupLabel);
-
         this.add(openEditStudentInformation);
-
     }
-//---------------------Строка---------------------
-    public StudentsManagementWindowElement(Student student){
+
+    //---------------------Строка---------------------
+    public StudentsManagementWindowElement(Student student) {
         this.student = student;
-        this.setPreferredSize(new Dimension(1000, 70));
-        this.setMaximumSize(new Dimension(1500, 70));
         this.setBackground(Color.YELLOW);
 
-        numberLabel = new JLabel("" + (++elementsCount));
-        numberLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        numberLabel.setPreferredSize(new Dimension(30,70));
+        idStudentsManagementElement = ++elementsCount;
 
+        numberLabel = new JLabel("" + (idStudentsManagementElement));
         lastNameLabel = new JLabel(student.getLastName());
-        lastNameLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        lastNameLabel.setPreferredSize(new Dimension(sizeOfLastNameLabel,70));
-
         firstNameLabel = new JLabel(student.getFirstName());
-        firstNameLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        firstNameLabel.setPreferredSize(new Dimension(sizeOfFirstNameLabel,70));
-
         middleNameLabel = new JLabel(student.getMiddleName());
-        middleNameLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        middleNameLabel.setPreferredSize(new Dimension(sizeOfMiddleNameLabel,70));
-
         mathBaseGroupLabel = new JLabel(student.getMathBaseGroupName());
-        mathBaseGroupLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        mathBaseGroupLabel.setPreferredSize(new Dimension(sizeOfBaseGroup,70));
-
         mathAdvancedGroupLabel = new JLabel(student.getMathAdvancedGroupName());
-        mathAdvancedGroupLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        mathAdvancedGroupLabel.setPreferredSize(new Dimension(sizeOfAdvancedGroup,70));
-
         physBaseGroupLabel = new JLabel(student.getPhysBaseGroupName());
-        physBaseGroupLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        physBaseGroupLabel.setPreferredSize(new Dimension(sizeOfBaseGroup,70));
-
         physAdvancedGroupLabel = new JLabel(student.getPhysAdvancedGroupName());
-        physAdvancedGroupLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        physAdvancedGroupLabel.setPreferredSize(new Dimension(sizeOfAdvancedGroup,70));
-
         rusGroupLabel = new JLabel(student.getRusGroupName());
-        rusGroupLabel.setFont(new java.awt.Font(fontName,fontType,fontSize));
-        rusGroupLabel.setPreferredSize(new Dimension(sizeOfBaseGroup,70));
 
         openEditStudentInformation = new JButton("Редактировать");
-        openEditStudentInformation.setFont(new java.awt.Font(fontName,fontType,fontSize));
+        openEditStudentInformation.setFont(elementFont);
         openEditStudentInformation.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                new EditStudentWindow(student);
+                new EditStudentWindow(student, idStudentsManagementElement);
             }
         });
 
-        this.add(numberLabel);
+        this.setPreferredSize(new Dimension(1000, height));
+        this.setMaximumSize(new Dimension(1500, height));
+        numberLabel.setPreferredSize(new Dimension(30, height));
+        lastNameLabel.setPreferredSize(new Dimension(sizeOfLastNameLabel, height));
+        firstNameLabel.setPreferredSize(new Dimension(sizeOfFirstNameLabel, height));
+        middleNameLabel.setPreferredSize(new Dimension(sizeOfMiddleNameLabel, height));
+        mathBaseGroupLabel.setPreferredSize(new Dimension(sizeOfBaseGroup, height));
+        mathAdvancedGroupLabel.setPreferredSize(new Dimension(sizeOfAdvancedGroup, height));
+        physBaseGroupLabel.setPreferredSize(new Dimension(sizeOfBaseGroup, height));
+        physAdvancedGroupLabel.setPreferredSize(new Dimension(sizeOfAdvancedGroup, height));
+        rusGroupLabel.setPreferredSize(new Dimension(sizeOfBaseGroup, height));
 
+        numberLabel.setFont(elementFont);
+        lastNameLabel.setFont(elementFont);
+        firstNameLabel.setFont(elementFont);
+        middleNameLabel.setFont(elementFont);
+        mathBaseGroupLabel.setFont(elementFont);
+        mathAdvancedGroupLabel.setFont(elementFont);
+        physBaseGroupLabel.setFont(elementFont);
+        physAdvancedGroupLabel.setFont(elementFont);
+        rusGroupLabel.setFont(elementFont);
+
+        this.add(numberLabel);
         this.add(lastNameLabel);
         this.add(firstNameLabel);
         this.add(middleNameLabel);
-
         this.add(mathBaseGroupLabel);
         this.add(mathAdvancedGroupLabel);
-
         this.add(physBaseGroupLabel);
         this.add(physAdvancedGroupLabel);
-
         this.add(rusGroupLabel);
-
         this.add(openEditStudentInformation);
     }
 }
