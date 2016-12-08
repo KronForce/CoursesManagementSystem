@@ -31,9 +31,6 @@ public class MainMenuWindow extends BaseFrame {
         groupsManagementButton.setFont(new java.awt.Font(fontName, fontType, fontSize));
         studentsManagementButton.setFont(new java.awt.Font(fontName, fontType, fontSize));
 
-        this.add(jPanel);
-        jPanel.add(groupsManagementButton);
-        jPanel.add(studentsManagementButton);
 
         groupsManagementButton.addActionListener(new ActionListener() {
             @Override
@@ -47,6 +44,9 @@ public class MainMenuWindow extends BaseFrame {
                 new StudentsManagementWindow();
             }
         });
+        this.add(jPanel);
+        jPanel.add(groupsManagementButton);
+        jPanel.add(studentsManagementButton);
 
 
         jPanel.setLayout(null);

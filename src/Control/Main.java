@@ -8,10 +8,6 @@ import view.windows.MainMenuWindow;
 public class Main {
     //todo ПРИЧЕСЫВАНИЕ подумать, куда перенести пакет META-INF из src.
     public static void main(String[] args) {
-        /*
-
-        * */
         MainMenuWindow mainMenuWindow = new MainMenuWindow();
-
     }
 }

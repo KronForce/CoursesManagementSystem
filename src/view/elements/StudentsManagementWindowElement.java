@@ -53,7 +53,7 @@ public class StudentsManagementWindowElement extends JPanel {
         physBaseGroupLabel = new JLabel("ФБаза");
         physAdvancedGroupLabel = new JLabel("ФРасш");
         rusGroupLabel = new JLabel("РУС");
-
+        openEditStudentInformation = new JButton("Новый Студент");
         this.setBackground(Color.GRAY);
 
         this.setPreferredSize(new Dimension(1000, height));
@@ -91,7 +91,7 @@ public class StudentsManagementWindowElement extends JPanel {
         this.add(rusGroupLabel);
         this.add(openEditStudentInformation);
 
-        openEditStudentInformation = new JButton("Новый Студент");
+
         openEditStudentInformation.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -118,13 +118,7 @@ public class StudentsManagementWindowElement extends JPanel {
         rusGroupLabel = new JLabel(student.getRusGroupName());
 
         openEditStudentInformation = new JButton("Редактировать");
-        openEditStudentInformation.setFont(elementFont);
-        openEditStudentInformation.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new EditStudentWindow(student, idStudentsManagementElement);
-            }
-        });
+
 
         this.setPreferredSize(new Dimension(1000, height));
         this.setMaximumSize(new Dimension(1500, height));
@@ -158,5 +152,13 @@ public class StudentsManagementWindowElement extends JPanel {
         this.add(physAdvancedGroupLabel);
         this.add(rusGroupLabel);
         this.add(openEditStudentInformation);
+
+        openEditStudentInformation.setFont(elementFont);
+        openEditStudentInformation.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new EditStudentWindow(student, idStudentsManagementElement);
+            }
+        });
     }
 }
