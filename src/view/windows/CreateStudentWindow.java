@@ -94,7 +94,127 @@ public class CreateStudentWindow extends BaseFrame {
 
         JButton addStudent = new JButton("Добавить студента");
 //---------------------------------------------------------------------------------------------------------
+        createStudentPanel.setBackground(Color.gray);
+        photoPanel.setBackground(Color.DARK_GRAY);
+        //groupsPanel.setBackground(Color.YELLOW);
+        //physPanelLabelsArea.setBackground(Color.YELLOW);
+        //physPanelButtonsArea.setBackground(Color.GREEN);
+        //mathPanelMathGroupsButtonsArea.setBackground(Color.BLUE);
+        //mathPanelElementsArea.setBackground(Color.ORANGE);
+        //fioPanel.setBackground(Color.BLUE);
+        //mathPanelMathGroupsLabelsArea.setBackground(Color.GREEN);
+//---------------------------------------------------------------------------------------------------------
+        fioPanel.setPreferredSize(new Dimension(900, 300));
+        groupsPanel.setPreferredSize(new Dimension(1200, 300));
+        middleNameLabel.setPreferredSize(new Dimension(200, 90));
+        middleNameTextField.setPreferredSize(new Dimension(600, 70));
+        addStudent.setPreferredSize(new Dimension(600, 70));
+        photoPanel.setPreferredSize(new Dimension(300, 300));
 
+        lastNameLabel.setPreferredSize(new Dimension(200, 90));
+        lastNameTextField.setPreferredSize(new Dimension(600, 70));
+        firstNameLabel.setPreferredSize(new Dimension(200, 90));
+        firstNameTextField.setPreferredSize(new Dimension(600, 70));
+
+        mathPanel.setPreferredSize(new Dimension(1200, 100));
+        mathPanelMathLabelArea.setPreferredSize(new Dimension(300, 90));
+        mathLabel.setPreferredSize(new Dimension(300, 90));
+        mathPanelElementsArea.setPreferredSize(new Dimension(850, 100));
+        mathPanelMathGroupsLabelsArea.setPreferredSize(new Dimension(850, 30));
+        mathPanelMathGroupsButtonsArea.setPreferredSize(new Dimension(850, 60));
+
+        physPanel.setPreferredSize(new Dimension(1200, 100));
+        physPanelPhysLabelArea.setPreferredSize(new Dimension(300, 90));
+        physLabel.setPreferredSize(new Dimension(300, 90));
+        physPanelElementsArea.setPreferredSize(new Dimension(850, 100));
+        physPanelLabelsArea.setPreferredSize(new Dimension(850, 30));
+        physPanelButtonsArea.setPreferredSize(new Dimension(850, 60));
+
+        rusPanel.setPreferredSize(new Dimension(1200, 100));
+        rusPanelRusLabelArea.setPreferredSize(new Dimension(300, 90));
+        rusLabel.setPreferredSize(new Dimension(300, 90));
+        rusPanelElementsArea.setPreferredSize(new Dimension(850, 100));
+        rusPanelLabelsArea.setPreferredSize(new Dimension(850, 30));
+        rusPanelButtonsArea.setPreferredSize(new Dimension(850, 60));
+//---------------------------------------------------------------------------------------------------------
+        addStudent.setFont(elementFont);
+        lastNameLabel.setFont(elementFont);
+        lastNameTextField.setFont(elementFont);
+        firstNameLabel.setFont(elementFont);
+        firstNameTextField.setFont(elementFont);
+        rusLabel.setFont(elementFont);
+        mathLabel.setFont(elementFont);
+        middleNameLabel.setFont(elementFont);
+        middleNameTextField.setFont(elementFont);
+        physLabel.setFont(elementFont);
+//------------------------------------------------------------------------------------
+        this.add(createStudentPanel);
+        createStudentPanel.add(photoPanel);
+        createStudentPanel.add(fioPanel);
+        createStudentPanel.add(groupsPanel);
+        createStudentPanel.add(addStudent);
+
+        fioPanel.add(lastNameLabel);
+        fioPanel.add(lastNameTextField);
+        fioPanel.add(firstNameLabel);
+        fioPanel.add(firstNameTextField);
+        fioPanel.add(middleNameLabel);
+        fioPanel.add(middleNameTextField);
+
+        groupsPanel.add(mathPanel);
+        groupsPanel.add(physPanel);
+        groupsPanel.add(rusPanel);
+
+        mathPanel.add(mathPanelMathLabelArea);
+        mathPanelMathLabelArea.add(mathLabel);
+        mathPanel.add(mathPanelElementsArea);
+
+        mathPanelElementsArea.add(mathPanelMathGroupsLabelsArea);
+        mathPanelMathGroupsLabelsArea.add(ma1Label);
+        mathPanelMathGroupsLabelsArea.add(ma2Label);
+        mathPanelMathGroupsLabelsArea.add(mbLabel);
+        mathPanelMathGroupsLabelsArea.add(mcLabel);
+        mathPanelMathGroupsLabelsArea.add(msLabel);
+        mathPanelMathGroupsLabelsArea.add(moLabel);
+        mathPanelMathGroupsLabelsArea.add(mo2Label);
+
+        mathPanelElementsArea.add(mathPanelMathGroupsButtonsArea);
+        mathPanelMathGroupsButtonsArea.add(ma1Button);
+        mathPanelMathGroupsButtonsArea.add(ma2Button);
+        mathPanelMathGroupsButtonsArea.add(mbButton);
+        mathPanelMathGroupsButtonsArea.add(mcButton);
+        mathPanelMathGroupsButtonsArea.add(msButton);
+        mathPanelMathGroupsButtonsArea.add(moButton);
+        mathPanelMathGroupsButtonsArea.add(mo2Button);
+
+        physPanelButtonsArea.add(fa1Button);
+        physPanelButtonsArea.add(fa2Button);
+        physPanelButtonsArea.add(fb1Button);
+        physPanelButtonsArea.add(fc1Button);
+        physPanelButtonsArea.add(fr1Button);
+        physPanelButtonsArea.add(fr2Button);
+
+        physPanelLabelsArea.add(fa1Label);
+        physPanelLabelsArea.add(fa2Label);
+        physPanelLabelsArea.add(fb1Label);
+        physPanelLabelsArea.add(fc1Label);
+        physPanelLabelsArea.add(fr1Label);
+        physPanelLabelsArea.add(fr2Label);
+
+        physPanel.add(physPanelPhysLabelArea);
+        physPanelPhysLabelArea.add(physLabel);
+        physPanel.add(physPanelElementsArea);
+        physPanelElementsArea.add(physPanelLabelsArea);
+        physPanelElementsArea.add(physPanelButtonsArea);
+
+        rusPanel.add(rusPanelRusLabelArea);
+        rusPanel.add(rusPanelElementsArea);
+        rusPanelElementsArea.add(rusPanelLabelsArea);
+        rusPanelElementsArea.add(rusPanelButtonsArea);
+
+        rusPanelRusLabelArea.add(rusLabel);
+        rusPanelLabelsArea.add(rusGroupLabel);
+        rusPanelButtonsArea.add(rusGroupButton);
         ma1Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -335,129 +455,6 @@ public class CreateStudentWindow extends BaseFrame {
                 }
             }
         });
-//---------------------------------------------------------------------------------------------------------
-        fioPanel.setPreferredSize(new Dimension(900, 300));
-        groupsPanel.setPreferredSize(new Dimension(1200, 300));
-        middleNameLabel.setPreferredSize(new Dimension(200, 90));
-        middleNameTextField.setPreferredSize(new Dimension(600, 70));
-        addStudent.setPreferredSize(new Dimension(600, 70));
-        photoPanel.setPreferredSize(new Dimension(300, 300));
-
-        lastNameLabel.setPreferredSize(new Dimension(200, 90));
-        lastNameTextField.setPreferredSize(new Dimension(600, 70));
-        firstNameLabel.setPreferredSize(new Dimension(200, 90));
-        firstNameTextField.setPreferredSize(new Dimension(600, 70));
-
-        mathPanel.setPreferredSize(new Dimension(1200, 100));
-        mathPanelMathLabelArea.setPreferredSize(new Dimension(300, 90));
-        mathLabel.setPreferredSize(new Dimension(300, 90));
-        mathPanelElementsArea.setPreferredSize(new Dimension(850, 100));
-        mathPanelMathGroupsLabelsArea.setPreferredSize(new Dimension(850, 30));
-        mathPanelMathGroupsButtonsArea.setPreferredSize(new Dimension(850, 60));
-
-        physPanel.setPreferredSize(new Dimension(1200, 100));
-        physPanelPhysLabelArea.setPreferredSize(new Dimension(300, 90));
-        physLabel.setPreferredSize(new Dimension(300, 90));
-        physPanelElementsArea.setPreferredSize(new Dimension(850, 100));
-        physPanelLabelsArea.setPreferredSize(new Dimension(850, 30));
-        physPanelButtonsArea.setPreferredSize(new Dimension(850, 60));
-
-        rusPanel.setPreferredSize(new Dimension(1200, 100));
-        rusPanelRusLabelArea.setPreferredSize(new Dimension(300, 90));
-        rusLabel.setPreferredSize(new Dimension(300, 90));
-        rusPanelElementsArea.setPreferredSize(new Dimension(850, 100));
-        rusPanelLabelsArea.setPreferredSize(new Dimension(850, 30));
-        rusPanelButtonsArea.setPreferredSize(new Dimension(850, 60));
-//---------------------------------------------------------------------------------------------------------
-        addStudent.setFont(elementFont);
-        lastNameLabel.setFont(elementFont);
-        lastNameTextField.setFont(elementFont);
-        firstNameLabel.setFont(elementFont);
-        firstNameTextField.setFont(elementFont);
-        rusLabel.setFont(elementFont);
-        mathLabel.setFont(elementFont);
-        middleNameLabel.setFont(elementFont);
-        middleNameTextField.setFont(elementFont);
-        physLabel.setFont(elementFont);
-//---------------------------------------------------------------------------------------------------------
-        createStudentPanel.setBackground(Color.gray);
-        photoPanel.setBackground(Color.DARK_GRAY);
-        //groupsPanel.setBackground(Color.YELLOW);
-        //physPanelLabelsArea.setBackground(Color.YELLOW);
-        //physPanelButtonsArea.setBackground(Color.GREEN);
-        //mathPanelMathGroupsButtonsArea.setBackground(Color.BLUE);
-        //mathPanelElementsArea.setBackground(Color.ORANGE);
-        //fioPanel.setBackground(Color.BLUE);
-        //mathPanelMathGroupsLabelsArea.setBackground(Color.GREEN);
-//------------------------------------------------------------------------------------
-        this.add(createStudentPanel);
-        createStudentPanel.add(photoPanel);
-        createStudentPanel.add(fioPanel);
-        createStudentPanel.add(groupsPanel);
-        createStudentPanel.add(addStudent);
-
-        fioPanel.add(lastNameLabel);
-        fioPanel.add(lastNameTextField);
-        fioPanel.add(firstNameLabel);
-        fioPanel.add(firstNameTextField);
-        fioPanel.add(middleNameLabel);
-        fioPanel.add(middleNameTextField);
-
-        groupsPanel.add(mathPanel);
-        groupsPanel.add(physPanel);
-        groupsPanel.add(rusPanel);
-
-        mathPanel.add(mathPanelMathLabelArea);
-        mathPanelMathLabelArea.add(mathLabel);
-        mathPanel.add(mathPanelElementsArea);
-
-        mathPanelElementsArea.add(mathPanelMathGroupsLabelsArea);
-        mathPanelMathGroupsLabelsArea.add(ma1Label);
-        mathPanelMathGroupsLabelsArea.add(ma2Label);
-        mathPanelMathGroupsLabelsArea.add(mbLabel);
-        mathPanelMathGroupsLabelsArea.add(mcLabel);
-        mathPanelMathGroupsLabelsArea.add(msLabel);
-        mathPanelMathGroupsLabelsArea.add(moLabel);
-        mathPanelMathGroupsLabelsArea.add(mo2Label);
-
-        mathPanelElementsArea.add(mathPanelMathGroupsButtonsArea);
-        mathPanelMathGroupsButtonsArea.add(ma1Button);
-        mathPanelMathGroupsButtonsArea.add(ma2Button);
-        mathPanelMathGroupsButtonsArea.add(mbButton);
-        mathPanelMathGroupsButtonsArea.add(mcButton);
-        mathPanelMathGroupsButtonsArea.add(msButton);
-        mathPanelMathGroupsButtonsArea.add(moButton);
-        mathPanelMathGroupsButtonsArea.add(mo2Button);
-
-        physPanelButtonsArea.add(fa1Button);
-        physPanelButtonsArea.add(fa2Button);
-        physPanelButtonsArea.add(fb1Button);
-        physPanelButtonsArea.add(fc1Button);
-        physPanelButtonsArea.add(fr1Button);
-        physPanelButtonsArea.add(fr2Button);
-
-        physPanelLabelsArea.add(fa1Label);
-        physPanelLabelsArea.add(fa2Label);
-        physPanelLabelsArea.add(fb1Label);
-        physPanelLabelsArea.add(fc1Label);
-        physPanelLabelsArea.add(fr1Label);
-        physPanelLabelsArea.add(fr2Label);
-
-        physPanel.add(physPanelPhysLabelArea);
-        physPanelPhysLabelArea.add(physLabel);
-        physPanel.add(physPanelElementsArea);
-        physPanelElementsArea.add(physPanelLabelsArea);
-        physPanelElementsArea.add(physPanelButtonsArea);
-
-        rusPanel.add(rusPanelRusLabelArea);
-        rusPanel.add(rusPanelElementsArea);
-        rusPanelElementsArea.add(rusPanelLabelsArea);
-        rusPanelElementsArea.add(rusPanelButtonsArea);
-
-        rusPanelRusLabelArea.add(rusLabel);
-        rusPanelLabelsArea.add(rusGroupLabel);
-        rusPanelButtonsArea.add(rusGroupButton);
-
         this.setVisible(true);
     }
 }

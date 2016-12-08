@@ -25,11 +25,15 @@ public class MainMenuWindow extends BaseFrame {
 
         //jPanel.setBackground(Color.YELLOW);
 
+        groupsManagementButton.setBounds(330, 190, 700, 100);
+        studentsManagementButton.setBounds(330, 310, 700, 100);
+
         groupsManagementButton.setFont(new java.awt.Font(fontName, fontType, fontSize));
         studentsManagementButton.setFont(new java.awt.Font(fontName, fontType, fontSize));
 
-        groupsManagementButton.setBounds(330, 190, 700, 100);
-        studentsManagementButton.setBounds(330, 310, 700, 100);
+        this.add(jPanel);
+        jPanel.add(groupsManagementButton);
+        jPanel.add(studentsManagementButton);
 
         groupsManagementButton.addActionListener(new ActionListener() {
             @Override
@@ -44,9 +48,7 @@ public class MainMenuWindow extends BaseFrame {
             }
         });
 
-        this.add(jPanel);
-        jPanel.add(groupsManagementButton);
-        jPanel.add(studentsManagementButton);
+
         jPanel.setLayout(null);
         this.setVisible(true);
     }

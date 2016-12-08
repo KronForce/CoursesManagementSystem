@@ -88,6 +88,32 @@ public class GroupsManagementWindow extends BaseFrame {
         fr2Button.setFont(elementFont);
         rusButton.setFont(elementFont);
 
+        this.setLayout(new GridLayout());
+        this.add(mathPanel);
+        this.add(physPanel);
+        this.add(russianPanel);
+
+        mathPanel.add(mathLabel);
+        physPanel.add(physLabel);
+
+        mathPanel.add(ma1Button);
+        mathPanel.add(ma2Button);
+        mathPanel.add(mbButton);
+        mathPanel.add(mcButton);
+        mathPanel.add(msButton);
+        mathPanel.add(moButton);
+        mathPanel.add(mo2Button);
+
+        physPanel.add(fa1Button);
+        physPanel.add(fa2Button);
+        physPanel.add(fb1Button);
+        physPanel.add(fc1Button);
+        physPanel.add(fr1Button);
+        physPanel.add(fr2Button);
+
+        russianPanel.add(russianLabel);
+        russianPanel.add(rusButton);
+
         ma1Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -174,32 +200,6 @@ public class GroupsManagementWindow extends BaseFrame {
                 new GroupWindow(rusButton.getText());
             }
         });
-
-        this.setLayout(new GridLayout());
-        this.add(mathPanel);
-        this.add(physPanel);
-        this.add(russianPanel);
-
-        mathPanel.add(mathLabel);
-        physPanel.add(physLabel);
-
-        mathPanel.add(ma1Button);
-        mathPanel.add(ma2Button);
-        mathPanel.add(mbButton);
-        mathPanel.add(mcButton);
-        mathPanel.add(msButton);
-        mathPanel.add(moButton);
-        mathPanel.add(mo2Button);
-
-        physPanel.add(fa1Button);
-        physPanel.add(fa2Button);
-        physPanel.add(fb1Button);
-        physPanel.add(fc1Button);
-        physPanel.add(fr1Button);
-        physPanel.add(fr2Button);
-
-        russianPanel.add(russianLabel);
-        russianPanel.add(rusButton);
 
         this.setVisible(true);
     }

@@ -56,13 +56,13 @@ public class GroupWindowElement extends JPanel {
         todayLabelButton = new JLabel("Кнопка ТУТ");
         changePaymentStatusLabelButton = new JLabel("Кнопка ОПЛАТИТЬ");
         JButton addStudentFromList = new JButton("Добавить студента");
-        addStudentFromList.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Нажата клавиша добавления студента!");
-            }
-        });
-        //--------------------------ШРИФТЫ------------------------------------------
+
+//--------------------------РАЗМЕРЫ------------------------------------------
+        numberLabel.setPreferredSize(new Dimension(30, height));
+        lastNameLabel.setPreferredSize(new Dimension(sizeOfLastNameLabel, height));
+        firstNameLabel.setPreferredSize(new Dimension(sizeOfFirstNameLabel, height));
+        middleNameLabel.setPreferredSize(new Dimension(sizeOfFirstNameLabel, height));
+//--------------------------ШРИФТЫ------------------------------------------
         numberLabel.setFont(elementFont);
         lastNameLabel.setFont(elementFont);
         firstNameLabel.setFont(elementFont);
@@ -74,11 +74,6 @@ public class GroupWindowElement extends JPanel {
         paymentStatusLabel.setFont(elementFont);
         todayLabel.setFont(elementFont);
         todayLabelButton.setFont(elementFont);
-//--------------------------РАЗМЕРЫ------------------------------------------
-        numberLabel.setPreferredSize(new Dimension(30, height));
-        lastNameLabel.setPreferredSize(new Dimension(sizeOfLastNameLabel, height));
-        firstNameLabel.setPreferredSize(new Dimension(sizeOfFirstNameLabel, height));
-        middleNameLabel.setPreferredSize(new Dimension(sizeOfFirstNameLabel, height));
 //---------------------------------------------------------------------------
         this.add(numberLabel);
         this.add(lastNameLabel);
@@ -92,6 +87,13 @@ public class GroupWindowElement extends JPanel {
         this.add(todayLabelButton);
         this.add(changePaymentStatusLabelButton);
         this.add(addStudentFromList);
+//---------------------------------------------------------------------------
+        addStudentFromList.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Нажата клавиша добавления студента!");
+            }
+        });
     }
 
     //-----строка-----

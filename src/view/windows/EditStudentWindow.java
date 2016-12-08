@@ -119,7 +119,54 @@ public class EditStudentWindow extends BaseFrame {
         //---------------------Получение групп по русскому языку------------------------------
         rusGroupLabel.setText(student.getRusGroupName());
 
-//------------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------------------------------
+        createStudentPanel.setBackground(Color.gray);
+        photoPanel.setBackground(Color.DARK_GRAY);
+//---------------------------------------------------------------------------------------------------------
+        photoPanel.setPreferredSize(new Dimension(300, 300));
+        fioPanel.setPreferredSize(new Dimension(900, 300));
+        lastNameLabel.setPreferredSize(new Dimension(200, 90));
+        lastNameTextField.setPreferredSize(new Dimension(600, 70));
+        firstNameLabel.setPreferredSize(new Dimension(200, 90));
+        firstNameTextField.setPreferredSize(new Dimension(600, 70));
+        middleNameLabel.setPreferredSize(new Dimension(200, 90));
+        middleNameTextField.setPreferredSize(new Dimension(600, 70));
+        groupsPanel.setPreferredSize(new Dimension(1200, 300));
+        addStudent.setPreferredSize(new Dimension(600, 70));
+        //-------SIZE--------
+        mathPanel.setPreferredSize(new Dimension(1200, 100));
+        mathPanelMathLabelArea.setPreferredSize(new Dimension(300, 90));
+        mathLabel.setPreferredSize(new Dimension(300, 90));
+        mathPanelElementsArea.setPreferredSize(new Dimension(850, 100));
+        mathPanelMathGroupsLabelsArea.setPreferredSize(new Dimension(850, 30));
+        mathPanelMathGroupsButtonsArea.setPreferredSize(new Dimension(850, 60));
+        //-------------
+        physPanel.setPreferredSize(new Dimension(1200, 100));
+        physPanelPhysLabelArea.setPreferredSize(new Dimension(300, 90));
+        physLabel.setPreferredSize(new Dimension(300, 90));
+        physPanelElementsArea.setPreferredSize(new Dimension(850, 100));
+        physPanelLabelsArea.setPreferredSize(new Dimension(850, 30));
+        physPanelButtonsArea.setPreferredSize(new Dimension(850, 60));
+        //---------------------
+        rusPanel.setPreferredSize(new Dimension(1200, 100));
+        rusPanelRusLabelArea.setPreferredSize(new Dimension(300, 90));
+        rusLabel.setPreferredSize(new Dimension(300, 90));
+        rusPanelElementsArea.setPreferredSize(new Dimension(850, 100));
+        rusPanelLabelsArea.setPreferredSize(new Dimension(850, 30));
+        rusPanelButtonsArea.setPreferredSize(new Dimension(850, 60));
+//---------------------------------------------------------------------------------------------------------
+        addStudent.setFont(elementFont);
+        lastNameLabel.setFont(elementFont);
+        lastNameTextField.setFont(elementFont);
+        firstNameLabel.setFont(elementFont);
+        firstNameTextField.setFont(elementFont);
+        middleNameLabel.setFont(elementFont);
+        middleNameTextField.setFont(elementFont);
+        mathLabel.setFont(elementFont);
+        rusLabel.setFont(elementFont);
+        physLabel.setFont(elementFont);
+        //------------------------------------------------------------------------------------
         this.add(createStudentPanel);
         createStudentPanel.add(photoPanel);
         createStudentPanel.add(fioPanel);
@@ -187,20 +234,7 @@ public class EditStudentWindow extends BaseFrame {
         rusPanelRusLabelArea.add(rusLabel);
         rusPanelLabelsArea.add(rusGroupLabel);
         rusPanelButtonsArea.add(rusGroupButton);
-//---------------------------------------------------------------------------------------------------------
-        createStudentPanel.setBackground(Color.gray);
-        photoPanel.setBackground(Color.DARK_GRAY);
-//---------------------------------------------------------------------------------------------------------
-        addStudent.setFont(elementFont);
-        lastNameLabel.setFont(elementFont);
-        lastNameTextField.setFont(elementFont);
-        firstNameLabel.setFont(elementFont);
-        firstNameTextField.setFont(elementFont);
-        middleNameLabel.setFont(elementFont);
-        middleNameTextField.setFont(elementFont);
-        mathLabel.setFont(elementFont);
-        rusLabel.setFont(elementFont);
-        physLabel.setFont(elementFont);
+
 //---------------------------------------------------------------------------------------------------------
         ma1Button.addActionListener(new ActionListener() {
             @Override
@@ -448,38 +482,6 @@ public class EditStudentWindow extends BaseFrame {
                 }
             }
         });
-//---------------------------------------------------------------------------------------------------------
-        photoPanel.setPreferredSize(new Dimension(300, 300));
-        fioPanel.setPreferredSize(new Dimension(900, 300));
-        lastNameLabel.setPreferredSize(new Dimension(200, 90));
-        lastNameTextField.setPreferredSize(new Dimension(600, 70));
-        firstNameLabel.setPreferredSize(new Dimension(200, 90));
-        firstNameTextField.setPreferredSize(new Dimension(600, 70));
-        middleNameLabel.setPreferredSize(new Dimension(200, 90));
-        middleNameTextField.setPreferredSize(new Dimension(600, 70));
-        groupsPanel.setPreferredSize(new Dimension(1200, 300));
-        addStudent.setPreferredSize(new Dimension(600, 70));
-        //-------SIZE--------
-        mathPanel.setPreferredSize(new Dimension(1200, 100));
-        mathPanelMathLabelArea.setPreferredSize(new Dimension(300, 90));
-        mathLabel.setPreferredSize(new Dimension(300, 90));
-        mathPanelElementsArea.setPreferredSize(new Dimension(850, 100));
-        mathPanelMathGroupsLabelsArea.setPreferredSize(new Dimension(850, 30));
-        mathPanelMathGroupsButtonsArea.setPreferredSize(new Dimension(850, 60));
-        //-------------
-        physPanel.setPreferredSize(new Dimension(1200, 100));
-        physPanelPhysLabelArea.setPreferredSize(new Dimension(300, 90));
-        physLabel.setPreferredSize(new Dimension(300, 90));
-        physPanelElementsArea.setPreferredSize(new Dimension(850, 100));
-        physPanelLabelsArea.setPreferredSize(new Dimension(850, 30));
-        physPanelButtonsArea.setPreferredSize(new Dimension(850, 60));
-        //---------------------
-        rusPanel.setPreferredSize(new Dimension(1200, 100));
-        rusPanelRusLabelArea.setPreferredSize(new Dimension(300, 90));
-        rusLabel.setPreferredSize(new Dimension(300, 90));
-        rusPanelElementsArea.setPreferredSize(new Dimension(850, 100));
-        rusPanelLabelsArea.setPreferredSize(new Dimension(850, 30));
-        rusPanelButtonsArea.setPreferredSize(new Dimension(850, 60));
 
         this.setVisible(true);
     }

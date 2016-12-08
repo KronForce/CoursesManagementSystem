@@ -44,7 +44,6 @@ public class StudentsManagementWindowElement extends JPanel {
 
     //---------------------Шапка---------------------
     public StudentsManagementWindowElement() {
-        this.setBackground(Color.GRAY);
         numberLabel = new JLabel("№");
         lastNameLabel = new JLabel("Фамилия");
         firstNameLabel = new JLabel("Имя");
@@ -55,13 +54,7 @@ public class StudentsManagementWindowElement extends JPanel {
         physAdvancedGroupLabel = new JLabel("ФРасш");
         rusGroupLabel = new JLabel("РУС");
 
-        openEditStudentInformation = new JButton("Новый Студент");
-        openEditStudentInformation.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new CreateStudentWindow();
-            }
-        });
+        this.setBackground(Color.GRAY);
 
         this.setPreferredSize(new Dimension(1000, height));
         this.setMaximumSize(new Dimension(1500, height));
@@ -97,6 +90,14 @@ public class StudentsManagementWindowElement extends JPanel {
         this.add(physAdvancedGroupLabel);
         this.add(rusGroupLabel);
         this.add(openEditStudentInformation);
+
+        openEditStudentInformation = new JButton("Новый Студент");
+        openEditStudentInformation.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new CreateStudentWindow();
+            }
+        });
     }
 
     //---------------------Строка---------------------
